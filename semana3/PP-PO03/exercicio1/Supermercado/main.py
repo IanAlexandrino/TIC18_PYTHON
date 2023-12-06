@@ -7,6 +7,15 @@ def inserir_produto(produtos):
     produtos.append(produto)
     print("Produto inserido com sucesso!\n")
 
+def excluir_produto(produtos):
+    codigo = input("Digite o código do produto a ser excluído: ")
+    for produto in produtos:
+        if produto["codigo"] == codigo:
+            produtos.remove(produto)
+            print("Produto excluído com sucesso!\n")
+            return
+    print("Produto não encontrado!\n")
+
 def main():
      while True:
         print("Menu de Opções:")
