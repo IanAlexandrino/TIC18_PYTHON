@@ -1,4 +1,11 @@
-
+def inserir_produto(produtos):
+    codigo = input("Digite o código do produto: ")
+    nome = input("Digite o nome do produto: ").capitalize()
+    preco = float(input("Digite o preço do produto: "))
+    
+    produto = {"codigo": codigo, "nome": nome, "preco": preco}
+    produtos.append(produto)
+    print("Produto inserido com sucesso!\n")
 
 def main():
      while True:
