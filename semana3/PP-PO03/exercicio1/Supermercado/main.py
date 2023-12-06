@@ -22,6 +22,14 @@ def listar_produtos(produtos):
         print(f"Código: {produto['codigo']}, Nome: {produto['nome']}, Preço: R${produto['preco']:.2f}")
     print()
 
+def consultar_preco(produtos):
+    codigo = input("Digite o código do produto para consultar o preço: ")
+    for produto in produtos:
+        if produto["codigo"] == codigo:
+            print(f"O preço do produto {produto['nome']} é R${produto['preco']:.2f}\n")
+            return
+    print("Produto não encontrado!\n")
+
 def main():
      while True:
         print("Menu de Opções:")
