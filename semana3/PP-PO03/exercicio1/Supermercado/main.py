@@ -31,6 +31,8 @@ def consultar_preco(produtos):
     print("Produto não encontrado!\n")
 
 def main():
+     produtos = []
+
      while True:
         print("Menu de Opções:")
         print("1. Inserir novo produto")
@@ -41,6 +43,19 @@ def main():
 
         opcao = input("Escolha uma opção: ")
 
+        if opcao == "1":
+            inserir_produto(produtos)
+        elif opcao == "2":
+            excluir_produto(produtos)
+        elif opcao == "3":
+            listar_produtos(produtos)
+        elif opcao == "4":
+            consultar_preco(produtos)
+        elif opcao == "0":
+            print("Saindo do programa. Até mais!")
+            break
+        else:
+            print("Opção inválida. Tente novamente.\n")
 
 if __name__ == "__main__":
     main()
