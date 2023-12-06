@@ -16,6 +16,12 @@ def excluir_produto(produtos):
             return
     print("Produto não encontrado!\n")
 
+def listar_produtos(produtos):
+    print("\nLista de Produtos:")
+    for produto in produtos:
+        print(f"Código: {produto['codigo']}, Nome: {produto['nome']}, Preço: R${produto['preco']:.2f}")
+    print()
+
 def main():
      while True:
         print("Menu de Opções:")
